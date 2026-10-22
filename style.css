@@ -16,7 +16,7 @@ body {
 .game-container {
   width: 100%;
   max-width: 430px;
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 16px;
   background: #f6f3e9;
 }
@@ -303,4 +303,51 @@ body {
   margin: 0;
   overflow: hidden;
   overscroll-behavior: none;
+}
+/* タイトルと操作ボタンを横並びにする */
+.title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.title-bar h1 {
+    margin: 0;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+/* BGM・ポーズボタン */
+.title-buttons {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.title-buttons button {
+    padding: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* スコア・次の動物の表示をコンパクトにする */
+.game-header {
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.score-box,
+.next-box {
+    gap: 2px;
+}
+
+#score {
+    font-size: 26px;
+}
+
+#next-animal {
+    width: 44px;
+    height: 44px;
 }
