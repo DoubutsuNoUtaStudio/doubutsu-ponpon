@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <title>どうぶつぽんぽん｜もりのどうぶつ</title>
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+  <main class="game-container">
+
+    <h1>🌳 もりのどうぶつ</h1>
+
+    <header class="game-header">
+      <div class="score-box">
+        <span class="label">スコア</span>
+        <strong id="score">0</strong>
+        <span class="label">
+          🏆 ベスト：
+          <span id="high-score">0</span>
+        </span>
+      </div>
+
+      <div class="next-box">
+        <span class="label">つぎ</span>
+        <div id="next-animal">🦉</div>
+      </div>
+    </header>
+
+    <div id="game-board">
+    <p>ここに どうぶつが おちるよ</p>
+
+    <div id="danger-line"></div>
+    <div id="danger-message"></div>
+
+    <div id="game-over-screen">
+        <h2>ゲームオーバー！</h2>
+        <p>スコア：<span id="final-score">0</span></p>
+        <button id="retry-button">もういちど あそぶ</button>
+    </div>
+    </div>
+
+
+    <footer class="game-footer">
+      <button id="bgm-button">♫ BGM</button>
+      <button id="pause-button">Ⅱ ポーズ</button>
+    </footer>
+
+  </main>
+
+  <audio id="bgm" src="assets/audio/bgm.wav" loop preload="auto"></audio>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"></script>
+  <script src="game.js?v=6"></script>
+
+</body>
+</html>
